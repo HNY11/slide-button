@@ -61,31 +61,31 @@ public class MainActivity extends AppCompatActivity implements SlideButton.Slide
 | | Button | |
 | --- | --- | --- |
 | **Attributes** | **Description** | **Value** |
-| `custom:buttonPadding` | set the **padding of a button** | 20dp
-| `custom:cornerRadius` | Set the **corner radius of button** | 45dp
-| `custom:collapseColor` | Set the **color of button in collapse** state | android:color/white
-| `custom:expandColor` | Set the **color of button in expand** state | android:color/white
-| `custom:collapseIcon` | Set the **icon of button in collapse** state | drawable/collapsed
-| `custom:expandIcon` | Set the **icon of button in expand** state | drawable/expanded
-| `custom:strokeColor` | Set the **outline color of button** | #ee071a32
-| `custom:strokeWidth` | Set the **outline stroke width of button** | 3dp   
+| `app:buttonPadding` | set the **padding of a button** | 20dp
+| `app:cornerRadius` | Set the **corner radius of button** | 45dp
+| `app:collapseColor` | Set the **color of button in collapse** state | android:color/white
+| `app:expandColor` | Set the **color of button in expand** state | android:color/white
+| `app:collapseIcon` | Set the **icon of button in collapse** state | drawable/collapsed
+| `app:expandIcon` | Set the **icon of button in expand** state | drawable/expanded
+| `app:strokeColor` | Set the **outline color of button** | #ee071a32
+| `app:strokeWidth` | Set the **outline stroke width of button** | 3dp   
 
 
 | | Text | |
 | --- | --- | --- |
 | **Attributes** | **Description** | **Value** |
-| `custom:text` | set the **text of button** | Tap to Activate
-| `custom:textPadding` | set the **padding of a text** | 20dp
-| `custom:textSize` | Set the **size of text** | 8dp
-| `custom:textColor` | Set the **color of text** | #a39c9c
+| `app:text` | set the **text of button** | Tap to Activate
+| `app:textPadding` | set the **padding of a text** | 20dp
+| `app:textSize` | Set the **size of text** | 8dp
+| `app:textColor` | Set the **color of text** | #a39c9c
 
 
 | | Background | |
 | --- | --- | --- |
 | **Attributes** | **Description** | **Value** |
-| `custom:backColor` | set the **back color of button background** | #ee071a32
-| `custom:backStrokeColor` | Set the **outline stroke color of button background** | android:color/white
-| `custom:backStrokeWidth` |  Set the **outline stroke width of button background** | 2dp
+| `app:backColor` | set the **back color of button background** | #ee071a32
+| `app:backStrokeColor` | Set the **outline stroke color of button background** | android:color/white
+| `app:backStrokeWidth` |  Set the **outline stroke width of button background** | 2dp
 
 # Thanks
 # :blush:
