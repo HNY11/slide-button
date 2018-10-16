@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:background="#242626">
+
+    <com.greenlab.hackme.slidebutton.SlideButton
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        custom:id="@+id/btnUp"
+
+        custom:buttonPadding="20dp"
+        custom:cornerRadius="45dp"
+        custom:collapseColor="@android:color/white"
+        custom:expandColor="@android:color/white"
+        custom:collapseIcon="@drawable/collapsed"
+        custom:expandIcon="@drawable/expanded"
+        custom:strokeColor="#ee071a32"
+        custom:strokeWidth="3dp"
+
+        custom:backStrokeColor="@android:color/white"
+        custom:backColor="#ee071a32"
+        custom:backStrokeWidth="2dp"
+
+        custom:text="Tap to Activate"
+        custom:textPadding="20dp"
+        custom:textSize="8dp"
+        custom:textColor="#a39c9c">
+    </com.greenlab.hackme.slidebutton.SlideButton>
+
+    <com.greenlab.hackme.slidebutton.SlideButton
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+
+        custom:id="@+id/btnDown"
+
+        custom:buttonPadding="15dp"
+        custom:cornerRadius="25dp"
+        custom:collapseColor="@android:color/white"
+        custom:expandColor="@android:color/white"
+        custom:collapseIcon="@drawable/collapsed"
+        custom:expandIcon="@drawable/expanded"
+        custom:strokeColor="#ee071a32"
+        custom:strokeWidth="3dp"
+
+        custom:backStrokeColor="@android:color/white"
+        custom:backColor="#ee071a32"
+        custom:backStrokeWidth="2dp"
+
+        custom:text="Tap to Activate"
+        custom:textPadding="20dp"
+        custom:textSize="8dp"
+        custom:textColor="#b3a9a9">
+    </com.greenlab.hackme.slidebutton.SlideButton>
+
+</FrameLayout>
