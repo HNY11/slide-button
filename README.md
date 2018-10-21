@@ -17,13 +17,13 @@ allprojects {
 **Step 2. Add the dependency**  
 ```ruby
 dependencies {
-	        implementation 'com.github.LokikSoni:SlideButton:v0.2-beta'
+	        implementation 'com.github.LokikSoni:SlideButton:v0.3-beta'
 	}
 ```
 **Step 3. Add the View**  
 ```ruby
 <com.greenlab.hackme.slidebutton.SlideButton
-        custom:id="@+id/btnUp"
+         android:id="@+id/btnUp"
         android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
@@ -40,22 +40,25 @@ public class MainActivity extends AppCompatActivity implements SlideButton.Slide
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        slideButton1=new SlideButton(this);
+        slideButton1=findViewById(R.id.btnUp);
         slideButton1.setOnSlideListener(this);
     }
+
     @Override
-    public void onClick(boolean active, View v) {
+    public void onClick(SlideButton mSlideButton, boolean active) {
 
-         if(v.getId()==R.id.btnUp) {
+        if(mSlideButton.getId()==R.id.btnUp) {
 
-             if(active){
-                 Toast.makeText(this, "Active Up", Toast.LENGTH_SHORT).show();
-             }
-             else {
-                 Toast.makeText(this, "Deactivate Up", Toast.LENGTH_SHORT).show();
-             }
-         }
+            if(active){
+                Toast.makeText(this, "Active Up", Toast.LENGTH_SHORT).show();
+            }
+            else {
+                Toast.makeText(this, "Deactivate Up", Toast.LENGTH_SHORT).show();
+            }
+
+        }
     }
+}
 ```
 # *Customization*  
 | | Button | |
