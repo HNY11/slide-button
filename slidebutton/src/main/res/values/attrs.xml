@@ -2,8 +2,6 @@
 <resources>
     <declare-styleable name="SlideButton">
 
-        <attr name="id" format="integer"/>
-
         <attr name="text" format="string"/>
         <attr name="textPadding" format="dimension"/>
         <attr name="textSize" format="dimension"/>

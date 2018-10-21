@@ -23,14 +23,13 @@ public class SlideButton extends LinearLayout implements View.OnClickListener
     LinearLayout linearLayout;
     TextView centerText;
     ImageButton slidingButton;
-    View view;
 
     TypedArray typedArray;
     //shapes
     GradientDrawable buttonCollapse,buttonExpand,backgroundButton;
     String mAttrText;
     Drawable disabledDrawable,enabledDrawable;
-    int mAttrId,mAttrButtonPadding,mAttrTextPadding,
+    int mAttrButtonPadding,mAttrTextPadding,
             mAttrTextSize,mAttrTextColor,mAttrRadius,mAttrCollapse,
             mAttrStrokeWidth,mAttrStrokeColor,mAttrExpand,mAttrBackColor,
             mAttrBackStrokeColor,mAttrBackStrokeWidth;
@@ -87,9 +86,6 @@ public class SlideButton extends LinearLayout implements View.OnClickListener
 
         typedArray=context.getTheme().obtainStyledAttributes(attrs,R.styleable.SlideButton,0,0);
         try {
-            //attribute for id
-            mAttrId=typedArray.getResourceId(R.styleable.SlideButton_id,0);
-
             //attribute for text
             mAttrText = typedArray.getString(R.styleable.SlideButton_text);
             mAttrTextPadding=typedArray.getDimensionPixelSize(R.styleable.SlideButton_textPadding,0);
@@ -192,7 +188,6 @@ public class SlideButton extends LinearLayout implements View.OnClickListener
        params.setMargins(3,3,3,3);
        slidingButton.setLayoutParams(params);
        slidingButton.setImageDrawable(disabledDrawable);
-        slidingButton.setId(mAttrId);
        slidingButton.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
        slidingButton.setPadding(mAttrButtonPadding,mAttrButtonPadding,mAttrButtonPadding,mAttrButtonPadding);
        slidingButton.setBackground(buttonCollapse);
@@ -207,7 +202,6 @@ public class SlideButton extends LinearLayout implements View.OnClickListener
     @Override
     public void onClick(View view) {
 
-        this.view=view;
         if(active){
             collapseButton();
         }
@@ -218,7 +212,7 @@ public class SlideButton extends LinearLayout implements View.OnClickListener
     }
 
     public interface SlideListener{
-        void onClick(boolean active,View v);
+        void onClick(SlideButton mSlideButton,boolean active);
     }
 
     public void setOnSlideListener(SlideListener listener){
@@ -250,7 +244,7 @@ public class SlideButton extends LinearLayout implements View.OnClickListener
                 active = true;
 
                 if (listener!=null) {
-                    listener.onClick(true,view);
+                    listener.onClick(SlideButton.this,true);
                 }
                 slidingButton.setEnabled(true);
                 slidingButton.setImageDrawable(enabledDrawable);
@@ -285,7 +279,7 @@ public class SlideButton extends LinearLayout implements View.OnClickListener
                 active = false;
 
                 if(listener!=null){
-                    listener.onClick(false,view);
+                    listener.onClick(SlideButton.this,false);
                 }
                 slidingButton.setEnabled(true);
                 if(disabledDrawable!=null){

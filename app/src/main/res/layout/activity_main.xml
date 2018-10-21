@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
 
-        custom:id="@+id/btnUp"
+        android:id="@+id/btnUp"
 
         custom:buttonPadding="20dp"
         custom:cornerRadius="45dp"
@@ -39,7 +39,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="100dp"
 
-        custom:id="@+id/btnDown"
+        android:id="@+id/btnDown"
 
         custom:buttonPadding="15dp"
         custom:cornerRadius="25dp"
